@@ -1,5 +1,11 @@
+import React from "react";
+import Layout from "./components/Layout";
 import { WebAuthPage } from "./webAuthn/page";
-import Animation from "./components/Animation/Animation";
+
 export default function Home() {
-  return <Animation />;
+  return (
+    <Layout>
+      <WebAuthPage />
+    </Layout>
+  );
 }
