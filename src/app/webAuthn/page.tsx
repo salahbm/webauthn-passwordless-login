@@ -72,7 +72,7 @@ export const WebAuthPage: FC = () => {
     <div className={styles.form}>
       <p className="row-between">
         <b className={styles.text}>Status:</b>
-        {isRegistered ? (
+        {username.length > 1 ? (
           <b className={styles.text}>You have an account already</b>
         ) : (
           <b className={styles.text}>You dont have account yet</b>
