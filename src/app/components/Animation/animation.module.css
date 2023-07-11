@@ -10,6 +10,7 @@
 .hooksMain > div:nth-child(1) {
   width: 60px;
   height: 60px;
+  background-color: rgb(255, 221, 0);
 }
 
 .hooksMain > div:nth-child(2) {
@@ -20,10 +21,22 @@
 .hooksMain > div:nth-child(3) {
   width: 75px;
   height: 75px;
+  background-color: aquamarine;
 }
 .hooksMain > div:nth-child(4) {
   width: 65px;
   height: 65px;
+  background-color: rgb(163, 235, 85);
+}
+.hooksMain > div:nth-child(5) {
+  width: 55px;
+  height: 55px;
+  background-color: rgb(186, 85, 174);
+}
+.hooksMain > div:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(117, 221, 162);
 }
 
 .hooksMain > div::after {
@@ -34,7 +47,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(197, 194, 194, 0.734);
 }
 
 .hooksMain > div:nth-child(2)::after {
@@ -55,6 +68,18 @@
   left: 35px;
   width: 15px;
   height: 15px;
+}
+.hooksMain > div:nth-child(5)::after {
+  top: 15px;
+  left: 35px;
+  width: 55px;
+  height: 15px;
+}
+.hooksMain > div:nth-child(6)::after {
+  top: 15px;
+  left: 35px;
+  width: 15px;
+  height: 45px;
 }
 
 .hooksMain {

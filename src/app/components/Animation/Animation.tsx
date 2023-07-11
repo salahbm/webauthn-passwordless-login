@@ -11,7 +11,7 @@ const trans = (x: number, y: number) =>
   `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
 export default function Animation() {
-  const [trail, api] = useTrail(4, (i) => ({
+  const [trail, api] = useTrail(6, (i) => ({
     xy: [10, 0],
     config: i === 0 ? fast : slow,
   }));
