@@ -1,0 +1,15 @@
+.form {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
+.data {
+  overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
