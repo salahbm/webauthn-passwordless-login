@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   display: flex;
+  width: 40%;
 }
 .row {
   display: flex;
@@ -126,4 +127,23 @@
     cursor: pointer;
     color: #ffdd40;
   }
+}
+.text {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #1f5156;
+  font-size: 1rem;
+  border-radius: 20px;
+  width: 75%;
+  white-space: pre-wrap;
+}
+.button {
+  border: 1px solid #1f5156;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #1f5156;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
 }

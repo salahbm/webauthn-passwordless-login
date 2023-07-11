@@ -70,25 +70,35 @@ export const WebAuthPage: FC = () => {
 
   return (
     <div className={styles.form}>
-      {!isAuthenticated && (
-        <p>
-          <b>Username:</b>{" "}
-          <input
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </p>
-      )}
+      <p className="row-between">
+        <b className={styles.text}>Status:</b>
+        {isRegistered ? (
+          <b className={styles.text}>You have an account already</b>
+        ) : (
+          <b className={styles.text}>You dont have account yet</b>
+        )}
+      </p>
 
       <p className="row-between">
+        <b className={styles.text}>Username:</b>{" "}
+        <input
+          className={`${styles.input} `}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </p>
+
+      <p className="row">
         <button
+          className={isRegistered ? styles.button2 : styles.button}
           disabled={isRegistered || !!authenticationData}
           onClick={register}
         >
           Register
         </button>
-        <span> </span>
+        <span style={{ width: 300 }}> </span>
         <button
+          className={styles.button}
           disabled={!isRegistered || !!authenticationData}
           onClick={login}
         >
@@ -98,9 +108,23 @@ export const WebAuthPage: FC = () => {
 
       {authenticationData && (
         <>
-          <h3>AuthenticationData</h3>
+          <p className="row-between">
+            <h3 className={styles.text}>Clear Data</h3>
+            <button
+              className={styles.button}
+              onClick={() => {
+                setUsername("");
+                setAuthenticationData(null);
+              }}
+            >
+              Clear
+            </button>
+          </p>
+          <h3 className={styles.text}>AuthenticationData</h3>
           <pre className={styles.data}>
-            <code>{JSON.stringify(authenticationData, null, 2)}</code>
+            <code aria-multiline={true}>
+              {JSON.stringify(authenticationData, null, 2)}
+            </code>
           </pre>
         </>
       )}

@@ -5,7 +5,6 @@ import Link from "next/link";
 function NavBar() {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
   return (
     <>
       <nav className="navbar">
@@ -22,20 +21,11 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/" className="nav-links">
+              <Link href="/about" className="nav-links">
                 About
               </Link>
             </li>
-
-            <li className="nav-item">
-              <Link href="/" className="nav-links">
-                Contact Us
-              </Link>
-            </li>
           </ul>
-          <div className="nav-icon">
-            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-          </div>
         </div>
       </nav>
     </>
